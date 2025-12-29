@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Care Hospital | About Us</title>
+    <link rel="icon" href="images.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="Top">
+        <span><i class="fa-solid fa-phone" id="phone"></i><b>Emergency: 108</b></span>
+        <span><i class="fa-solid fa-clock" id="clock"></i>Open: 24/7</span>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-heart-pulse"></i> City Care Hospital
+        </div>
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li> <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="left">
+            <a href="*" class="open-modal-btn">BOOK APPOINTMENT</a>
+            <a href="#" class="open-login-btn">Login Here</a>
+        </div>
+    </nav>
+
+    <header class="main" style="height: 20vh; background: linear-gradient(rgba(0,123,255,0.8), rgba(0,123,255,0.6)), url('https://images.unsplash.com/photo-1538108149393-fbbd8189718c?auto=format&fit=crop&w=1350&q=80');">
+        <div class="main-content">
+            <h1>About Us</h1>
+            <p>Dedicated to Hope, Healing, and Health.</p>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" alt="Hospital Building">
+            </div>
+            <div class="about-text">
+                <h2>Who We Are</h2>
+                <p>Founded in 1998, City Care Hospital has been a beacon of hope for thousands of patients. We are a 500-bed multi-specialty center equipped with state-of-the-art medical technology.</p>
+                <br>
+                <h3>Our Mission</h3>
+                <p>To provide compassionate, accessible, and high-quality healthcare to the community.</p>
+                <br>
+                <ul class="about-list">
+                    <li><i class="fa-solid fa-check-circle"></i> 24/7 Emergency & Trauma Care</li>
+                    <li><i class="fa-solid fa-check-circle"></i> 50+ Specialized Doctors</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Advanced Pathology Labs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="doctors-section">
+        <h2>Meet Our Specialists</h2>
+        <div class="doctors-grid">
+            <div class="doctor-card">
+                <div class="doc-img">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=300&q=80" alt="Dr. Sharma">
+                </div>
+                <h3>Dr. Ravi Sharma</h3>
+                <p class="specialty">Cardiologist</p>
+                <p>MBBS, MD, 15+ Years Exp</p>
+            </div>
+
+            <div class="doctor-card">
+                <div class="doc-img">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80" alt="Dr. Anjali">
+                </div>
+                <h3>Dr. Anjali Verma</h3>
+                <p class="specialty">Pediatrician</p>
+                <p>MBBS, DCH, 10+ Years Exp</p>
+            </div>
+
+            <div class="doctor-card">
+                <div class="doc-img">
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=300&q=80" alt="Dr. Khan">
+                </div>
+                <h3>Dr. Aryan Khan</h3>
+                <p class="specialty">Neurologist</p>
+                <p>MBBS, DM, 12+ Years Exp</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="chat-widget">
+        <button id="chat-icon" class="chat-btn">
+            <i class="fa-solid fa-comment-medical"></i>
+        </button>
+        <div class="chat-box" id="chat-box">
+            <div class="chat-header">
+                <h3>ChatBot Assistance</h3>
+                <button id="close-chat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="bot-message">
+                    Hello! Welcome to the About page. <br> Need to know more about our doctors?
+                </div>
+            </div>
+            <div class="Options">
+                <button onclick="handleOption('book')">Book Appointment</button>
+                <button onclick="handleOption('address')">Address</button>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type here...">
+                <button id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-heart-pulse"></i> City Care Hospital</h3>
+                    <p>Providing advanced healthcare with compassion and integrity since 1998.</p>
+                </div>
+                </div>
+        </div>
+    </footer>
+<div id="appointment-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h2 style="color: #007bff;">Book Appointment</h2>
+            <p>Fill in the details and we will call you.</p>
+        </div>
+        <form class="appointment-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <select required>
+                <option value="" disabled selected>Select Department</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="neurology">Neurology</option>
+                <option value="orthopedics">Orthopedics</option>
+                <option value="general">General Checkup</option>
+            </select>
+            <input type="date" required>
+            <button type="submit" class="btn-submit">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

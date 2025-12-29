@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Care Hospital | Contact Us</title>
+    <link rel="icon" href="images.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="Top">
+        <span><i class="fa-solid fa-phone" id="phone"></i><b>Emergency: 108</b></span>
+        <span><i class="fa-solid fa-clock" id="clock"></i>Open: 24/7</span>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-heart-pulse"></i> City Care Hospital
+        </div>
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li> </ul>
+        <div class="left">
+            <a href="*" class="open-modal-btn">BOOK APPOINTMENT</a>
+            <a href="#" class="open-login-btn">Login Here</a>
+        </div>
+    </nav>
+
+    <header class="main" style="height: 20vh; background: linear-gradient(rgba(0,123,255,0.8), rgba(0,123,255,0.6)), url('https://images.unsplash.com/photo-1516574187841-693018f33663?auto=format&fit=crop&w=1350&q=80');">
+        <div class="main-content">
+            <h1>Contact Us</h1>
+            <p>We are here to help. Reach out to us 24/7.</p>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>For medical emergencies, please call 108 immediately. For general inquiries, use the details below.</p>
+                
+                <div class="info-box">
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="details">
+                        <h4>Location</h4>
+                        <p>City Care Hospital, Main Square, Pune - 411001</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="details">
+                        <h4>Phone</h4>
+                        <p>+91 98765 43210</p>
+                        <p>+91 12345 67890 (Ambulance)</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="details">
+                        <h4>Email</h4>
+                        <p>help@citycare.com</p>
+                        <p>appointments@citycare.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send a Message</h2>
+                <form>
+                    <div class="input-row">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea rows="5" placeholder="Message or Query" required></textarea>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-heart-pulse"></i> City Care Hospital</h3>
+                    <p>Providing advanced healthcare with compassion and integrity since 1998.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<div id="appointment-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h2 style="color: #007bff;">Book Appointment</h2>
+            <p>Fill in the details and we will call you.</p>
+        </div>
+        <form class="appointment-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <select required>
+                <option value="" disabled selected>Select Department</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="neurology">Neurology</option>
+                <option value="orthopedics">Orthopedics</option>
+                <option value="general">General Checkup</option>
+            </select>
+            <input type="date" required>
+            <button type="submit" class="btn-submit">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

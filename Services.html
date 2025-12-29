@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Care Hospital | Services</title>
+    <link rel="icon" href="images.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="Top">
+        <span><i class="fa-solid fa-phone" id="phone"></i><b>Emergency: 108</b></span>
+        <span><i class="fa-solid fa-clock" id="clock"></i>Open: 24/7</span>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-heart-pulse"></i> City Care Hospital
+        </div>
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li> <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="left">
+            <a href="*" class="open-modal-btn">BOOK APPOINTMENT</a>
+            <a href="#" class="open-login-btn">Login Here</a>
+        </div>
+    </nav>
+
+    <header class="main" style="height: 20vh; background: linear-gradient(rgba(0,123,255,0.8), rgba(0,123,255,0.6)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1353&q=80');">
+        <div class="main-content">
+            <h1>Our Medical Services</h1>
+            <p>Comprehensive care across 30+ specialties.</p>
+        </div>
+    </header>
+
+    <section class="services-page-section">
+        <div class="section-title">
+            <h2>Center of Excellence</h2>
+            <p>We provide world-class treatment with cutting-edge technology.</p>
+        </div>
+
+        <div class="services-grid">
+            
+            <div class="service-box">
+                <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                <h3>Cardiology</h3>
+                <p>Expert care for heart conditions, including angiography, angioplasty, and open-heart surgeries.</p>
+                <a href="#" class="read-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+                <h3>Neurology</h3>
+                <p>Advanced treatment for stroke, epilepsy, migraine, and complex brain disorders.</p>
+                <a href="#" class="read-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon"><i class="fa-solid fa-bone"></i></div>
+                <h3>Orthopedics</h3>
+                <p>Joint replacements, fracture management, and spine surgeries by top surgeons.</p>
+                <a href="#" class="read-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon"><i class="fa-solid fa-baby"></i></div>
+                <h3>Pediatrics</h3>
+                <p>Comprehensive care for infants, children, and adolescents, including vaccinations.</p>
+                <a href="#" class="read-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+           
+
+        </div>
+    </section>
+
+    <div class="chat-widget">
+        <button id="chat-icon" class="chat-btn">
+            <i class="fa-solid fa-comment-medical"></i>
+        </button>
+        <div class="chat-box" id="chat-box">
+            <div class="chat-header">
+                <h3>ChatBot Assistance</h3>
+                <button id="close-chat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="bot-message">Hello! Looking for a specific treatment?</div>
+            </div>
+            <div class="Options">
+                <button onclick="handleOption('book')">Book Appointment</button>
+                <button onclick="handleOption('address')">Location</button>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Ask about services...">
+                <button id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-heart-pulse"></i> City Care Hospital</h3>
+                    <p>Providing advanced healthcare with compassion and integrity since 1998.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+  <div id="appointment-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h2 style="color: #007bff;">Book Appointment</h2>
+            <p>Fill in the details and we will call you.</p>
+        </div>
+        <form class="appointment-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <select required>
+                <option value="" disabled selected>Select Department</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="neurology">Neurology</option>
+                <option value="orthopedics">Orthopedics</option>
+                <option value="general">General Checkup</option>
+            </select>
+            <input type="date" required>
+            <button type="submit" class="btn-submit">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

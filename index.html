@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityCare Hospital</title>
+    <link rel="icon" href="images.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<div class="Top">
+    <span ><i class="fa-solid fa-phone" id="phone"></i><b>Emergency: 108</b></span>
+    <span ><i class="fa-solid fa-clock" id="clock"></i>Open: 24/7</span>
+</div>
+<nav class="navbar">
+    <div class="logo">
+        <i class="fa-solid fa-heart-pulse"></i>City Care Hospital
+    </div>
+    <ul class="links">
+        <li><a href="Home.html" class="active">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+    </ul>
+    <div class="left">
+        <a href="#" class="open-modal-btn">BOOK APPOINTMENT</a>
+        <a href="#" class="open-login-btn">Login Here</a>
+    </div>
+</nav>
+<header class="main">
+    <div class="main-content">
+        <h4>Welcome to City Care Hospital</h4>
+        <h1>Your Health is Our Priority.</h1>
+        <p>The greatest wealth is health</p>
+        <button class="button-appointment open-modal-btn">Get Care Now</button>
+    </div>
+</header>
+<section class="feature-section">
+    <div class="container">
+        <div class="feature-card" id="card-doctor">
+            <div class="icon-box"><i class="fa-solid fa-user-doctor"></i></div>
+            <h3>Find a Doctor</h3>
+            <p>Choose from our top specialists for your Health needs.</p>
+        </div>
+
+        <div class="feature-card active-card" id="card-emergency">
+            <div class="icon-box"><i class="fas fa-ambulance"></i></div>
+            <h3>Emergency</h3>
+            <p>24/7 Rapid ambulance support and ICU care.</p>
+        </div>
+
+        <div class="feature-card" id="card-hours">
+            <div class="icon-box"><i class="fas fa-calendar-check"></i></div>
+            <h3>Opening Hours</h3>
+            <p>Check OPD timings and visiting hours.</p>
+        </div>
+    </div>
+</section>
+
+<div id="modal-doctor" class="modal">
+    <div class="modal-content">
+        <span class="close-modal close-doc">&times;</span>
+        <h2 class="modal-title">Our Specialists</h2>
+        <ul class="specialist-list">
+            <li><strong>Dr. Ravi Sharma</strong> - Cardiologist <br> <span class="doc-details">MBBS, MD (10 Yrs Exp)</span></li>
+            <li><strong>Dr. Anjali Verma</strong> - Pediatrician <br> <span class="doc-details">MBBS, DCH (8 Yrs Exp)</span></li>
+            <li><strong>Dr. Aryan Khan</strong> - Neurologist <br> <span class="doc-details">MBBS, DM (12 Yrs Exp)</span></li>
+        </ul>
+        <button class="btn-submit open-modal-btn">Book Now</button>
+    </div>
+</div>
+
+<div id="modal-emergency" class="modal">
+    <div class="modal-content text-center">
+        <span class="close-modal close-emg">&times;</span>
+        <h2 class="modal-title red-text">🚨 Emergency Contacts</h2>
+        <p>For immediate ambulance support, please call:</p>
+        <div class="emergency-box">108</div>
+        <p><strong>Reception Desk:</strong> +91 98765 43210</p>
+        <p><strong>ICU Direct Line:</strong> +91 12345 67890</p>
+    </div>
+</div>
+
+<div id="modal-hours" class="modal">
+    <div class="modal-content">
+        <span class="close-modal close-hour">&times;</span>
+        <h2 class="modal-title">Hospital Timings</h2>
+        <table class="timings-table">
+            <tr class="table-row-light"><td><strong>Emergency</strong></td><td>24 Hours / 7 Days</td></tr>
+            <tr><td><strong>OPD (Mon-Sat)</strong></td><td>9:00 AM - 8:00 PM</td></tr>
+            <tr class="table-row-light"><td><strong>Sunday</strong></td><td>10:00 AM - 2:00 PM</td></tr>
+            <tr><td><strong>Visiting Hours</strong></td><td>4:00 PM - 7:00 PM</td></tr>
+        </table>
+    </div>
+</div>
+
+<div class="chat-widget">
+    <button id="chat-icon" class="chat-btn"><i class="fa-solid fa-comment-medical"></i></button>
+    <div class="chat-box" id="chat-box">
+        <div class="chat-header">
+            <h3>ChatBot Assistance</h3>
+            <button id="close-chat"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="bot-message">
+                Hello! I am the City Care Assistant <br>
+                Click an Option Below or Type your Query <br>
+                I am here to help you Happily!
+            </div>
+        </div>
+        <div class="Options">
+            <button onclick="handleOption('book')">Schedule an Appointment</button>
+            <button onclick="handleOption('emergency')">Emergency</button>
+            <button onclick="handleOption('address')">Address</button>
+            <button onclick="handleOption('Time')">Timings</button>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your Query Here!">
+            <button id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-heart-pulse"></i>City Care Hospital</h3>
+                <p>Providing advanced healthcare with compassion and integrity since 1998.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a> 
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a> 
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="appointment-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h2 style="color: #007bff;">Book Appointment</h2>
+            <p>Fill in the details and we will call you.</p>
+        </div>
+        <form class="appointment-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <select required>
+                <option value="" disabled selected>Select Department</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="neurology">Neurology</option>
+                <option value="orthopedics">Orthopedics</option>
+                <option value="general">General Checkup</option>
+            </select>
+            <input type="date" required>
+            <button type="submit" class="btn-submit">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+<div id="login-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal close-login">&times;</span>
+        <div class="modal-header">
+            <h2 style="color: #007bff; text-align: center;">Welcome Back</h2>
+            <p style="text-align: center;">Please login to access your reports.</p>
+        </div>
+        <form class="login-form">
+            <input type="text" placeholder="Username or Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="btn-submit">Login</button>
+            <p style="margin-top: 15px; text-align: center; font-size: 13px;">
+                <a href="#" style="color: #007bff;">Forgot Password?</a>
+            </p>
+        </form>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
